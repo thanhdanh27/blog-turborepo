@@ -3,6 +3,7 @@
 
 generator client {
   provider = "prisma-client-js"
+  output   = "../node_modules/@prisma/client" // Đặt đúng thư mục node_modules của api
 }
 
 // prisma/schema.prisma
