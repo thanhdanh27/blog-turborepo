@@ -1,14 +1,11 @@
 import { Injectable, UnauthorizedException } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
-// import { User } from '@prisma/client';
-import type { Prisma } from '@prisma/client';
+import { User } from '@prisma/client';
 import { verify } from 'argon2';
 import { SignInInput } from 'src/auth/dto/signin.input';
 import { AuthJwtPayload } from 'src/auth/types/auth-jwtPayload';
 import { PrismaService } from 'src/prisma/prisma.service';
 import { CreateUserInput } from 'src/user/dto/create-user.input';
-
-type User = Prisma.UserGetPayload<{}>;
 
 @Injectable()
 export class AuthService {
