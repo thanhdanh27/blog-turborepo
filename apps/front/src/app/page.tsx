@@ -2,7 +2,6 @@ import Hero from "@/components/hero";
 import Posts from "@/components/Posts";
 import { fetchPosts } from "@/lib/actions/postAction";
 import { DEFAULT_PAGE_SIZE } from "@/lib/constants";
-import { getSession } from "@/lib/session";
 
 type Props = {
   searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
