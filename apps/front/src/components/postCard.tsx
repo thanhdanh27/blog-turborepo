@@ -3,14 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 type Props = Partial<Post>;
-const PostCard = ({
-  id,
-  title,
-  content,
-  slug,
-  thumbnail,
-  createdAt,
-}: Props) => {
+const PostCard = ({ id, title, content, thumbnail, createdAt }: Props) => {
   const slugify = (title: string) => {
     return title
       .toLowerCase() // Chuyển thành chữ thường

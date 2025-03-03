@@ -1,7 +1,7 @@
 "use client";
 
 import PostForm from "@/app/user/create-post/_components/PostForm";
-import { saveNewPost, updatePost } from "@/lib/actions/postAction";
+import { updatePost } from "@/lib/actions/postAction";
 import { Post } from "@/lib/types/modelTypes";
 import { useActionState } from "react";
 

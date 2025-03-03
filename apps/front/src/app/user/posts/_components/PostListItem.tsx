@@ -1,5 +1,5 @@
 import PostAction from "@/app/user/posts/_components/PostAction";
-import Pagination from "@/components/pagination";
+
 import { Post } from "@/lib/types/modelTypes";
 import { CheckIcon } from "@heroicons/react/16/solid";
 import Image from "next/image";

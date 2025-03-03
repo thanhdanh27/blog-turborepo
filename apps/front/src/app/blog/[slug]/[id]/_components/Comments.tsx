@@ -32,7 +32,15 @@ export default function Comments({ postId, user }: Props) {
     <div className="p-2 rounded-md shadow-md">
       <h6 className="text-lg text-slate-700">Comments</h6>
       {!!user && <AddComment user={user} postId={postId} refetch={refetch} />}
-      {!!user == false && <p className="font-bold">Please Login To Comment</p>}
+      {!!user == false && (
+        <p className="font-bold">
+          Please{" "}
+          <a className="underline" href="/auth/signin">
+            Login
+          </a>{" "}
+          To Comment
+        </p>
+      )}
       <div className="flex flex-col gap-4">
         {isLoading
           ? Array.from({ length: 12 }).map((_, index) => (

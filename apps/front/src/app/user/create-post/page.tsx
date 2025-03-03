@@ -1,5 +1,4 @@
 import CreatePostContainer from "@/app/user/create-post/_components/CreatePostContainer";
-import PostForm from "@/app/user/create-post/_components/PostForm";
 import React from "react";
 
 export default function CreatePostpage() {

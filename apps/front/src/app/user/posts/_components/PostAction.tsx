@@ -10,14 +10,11 @@ import {
   AlertDialogFooter,
   AlertDialogHeader,
   AlertDialogTitle,
-  AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
-import { Button } from "@/components/ui/button";
-import { deletePost, fetchPostById } from "@/lib/actions/postAction";
-import { redirect } from "next/navigation";
+import { deletePost } from "@/lib/actions/postAction";
+
 import SubmitForm from "@/components/SubmitForm";
 import { useState } from "react";
-import { useRouter } from "next/router";
 
 type Props = {
   postId: number;
