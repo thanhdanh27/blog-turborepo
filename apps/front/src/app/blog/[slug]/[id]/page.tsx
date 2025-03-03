@@ -6,14 +6,14 @@ import { getSession } from "@/lib/session";
 import Image from "next/image";
 
 type Props = {
-  params: {
+  params: Promise<{
     id: string;
-  };
+  }>;
 };
 
 export default async function PostPage({ params }: Props) {
-  const postId = (await params).id;
-  const post = await fetchPostById(+postId);
+  const { id } = await params;
+  const post = await fetchPostById(+id);
   const session = await getSession();
   const thumbnail = post.thumbnail;
 
