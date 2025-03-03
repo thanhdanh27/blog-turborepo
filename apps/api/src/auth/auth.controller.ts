@@ -15,7 +15,7 @@ export class AuthController {
     @Get("google/callback")
     async googleCallback(@Request() req, @Res() res:Response){
        const userData = await this.authService.login(req.user)
-        res.redirect(`http://localhost:3000/api/auth/google/callback?userId=${userData.id}&name=${userData.name}&avatar=${userData.avatar}&accessToken=${userData.accessToken}`)
+        res.redirect(`https://blog-turborepo.vercel.app/api/auth/google/callback?userId=${userData.id}&name=${userData.name}&avatar=${userData.avatar}&accessToken=${userData.accessToken}`)
     }
 
     @UseGuards(JwtAuthGuard)
