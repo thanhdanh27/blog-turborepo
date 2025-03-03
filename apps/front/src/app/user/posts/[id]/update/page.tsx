@@ -3,13 +3,14 @@ import { fetchPostById } from "@/lib/actions/postAction";
 import React from "react";
 
 type Props = {
-  params: {
+  params: Promise<{
     id: string;
-  };
+  }>;
 };
+
 export default async function UpdatePostPage(props: Props) {
-  const params = await props.params;
-  const post = await fetchPostById(parseInt(params.id));
+  const { id } = await props.params;
+  const post = await fetchPostById(parseInt(id));
   return (
     <div className="bg-white shadow-md p-6 max-w-2xl w-full">
       <h2 className="text-lg text-center font-bold text-slate-700">
