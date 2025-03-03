@@ -1,12 +1,4 @@
 {
   "extends": "./tsconfig.json",
-  "compilerOptions": {
-    "outDir": "./dist",          // Thư mục output
-    "rootDir": "./src",          // Thư mục code nguồn
-    "sourceMap": true,           // Debug dễ hơn
-    "removeComments": true,      // Xoá comment khi build
-    "noEmit": false              // Cho phép build file
-  },
-  "include": ["src/**/*"],       // File nào sẽ được build
-  "exclude": ["node_modules", "test", "dist", "**/*spec.ts"] // Bỏ qua file không cần build
+  "exclude": ["node_modules", "test", "dist", "**/*spec.ts"]
 }
