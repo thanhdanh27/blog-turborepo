@@ -1,14 +1,26 @@
 import { Injectable, UnauthorizedException } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
-import { User } from '@prisma/client';
+// import { User } from '@prisma/client';
 import { verify } from 'argon2';
 import { SignInInput } from 'src/auth/dto/signin.input';
 import { AuthJwtPayload } from 'src/auth/types/auth-jwtPayload';
 import { PrismaService } from 'src/prisma/prisma.service';
 import { CreateUserInput } from 'src/user/dto/create-user.input';
 
+type User = {
+    email: string;
+    password: string | null;
+    id: number;
+    name: string;
+    bio: string | null;
+    avatar: string | null;
+    createdAt: Date;
+    updatedAt: Date;
+}
+
 @Injectable()
 export class AuthService {
+    
 
     constructor(private prismaService: PrismaService, private jwtService:JwtService){}
     async validateLocalUser({email, password}: SignInInput){
